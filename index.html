@@ -27,10 +27,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cleaned HTML content -->
+
     <div id="app-container" class="max-w-md mx-auto bg-white min-h-screen shadow-lg relative">
 
-        <!-- HEADER -->
         <header class="p-4 flex justify-between items-center bg-white shadow-sm sticky top-0 z-10">
             <h1 class="text-xl font-bold text-primary">FokusMasaDepan</h1>
             <button onclick="showModal('modal-edit-settings')" class="text-gray-500 hover:text-primary transition-colors">
@@ -38,8 +37,8 @@
             </button>
         </header>
 
-        <!-- BERANDA -->
         <div id="page-beranda" class="page active pb-20">
+
             <section class="p-4 bg-primary text-white rounded-b-xl">
                 <p class="text-sm opacity-80">Saldo Saat Ini</p>
                 <p id="current-saldo" class="text-4xl font-bold">0</p>
@@ -48,22 +47,16 @@
             <section class="p-4">
                 <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
                     <div class="flex justify-between items-center mb-2">
-                        <p class="font-semibold text-gray-700">
-                            Limit Bulanan (Rp<span id="limit-amount-display">0</span>)
-                        </p>
+                        <p class="font-semibold text-gray-700">Limit Bulanan (Rp<span id="limit-amount-display">0</span>)</p>
                         <span id="limit-bulanan-status" class="font-bold text-gray-500">Aman</span>
                     </div>
-                    <p id="motivasi-text" class="text-sm italic text-gray-600">
-                        Atur Limit Bulanan Anda di Pengaturan!
-                    </p>
+                    <p id="motivasi-text" class="text-sm italic text-gray-600">Atur Limit Bulanan Anda di Pengaturan!</p>
                 </div>
             </section>
 
             <section class="p-4 pt-0">
                 <div class="flex justify-between items-center mb-3">
-                    <h2 class="text-lg font-bold text-gray-700">
-                        Ringkasan <span id="summary-period">Bulan Ini</span>
-                    </h2>
+                    <h2 class="text-lg font-bold text-gray-700">Ringkasan <span id="summary-period">Bulan Ini</span></h2>
                     <select id="filter-select" class="p-1 border rounded text-sm bg-white">
                         <option value="today">Hari Ini</option>
                         <option value="week">Minggu Ini</option>
@@ -72,7 +65,6 @@
                         <option value="all">Semua</option>
                     </select>
                 </div>
-
                 <div class="flex justify-around bg-gray-50 p-3 rounded-lg border">
                     <div class="text-center">
                         <p class="text-sm text-gray-500">Pemasukan</p>
@@ -90,18 +82,24 @@
                 <ul id="transaction-list" class="divide-y divide-gray-100"></ul>
             </section>
 
-            <button onclick="showModal('modal-tambah-transaksi')" 
-                    class="fixed bottom-20 right-6 bg-secondary text-white p-4 rounded-full shadow-lg">
+            <button onclick="showModal('modal-tambah-transaksi')" class="fixed bottom-20 right-6 bg-secondary text-white p-4 rounded-full shadow-lg">
                 <i class="fas fa-plus text-xl"></i>
             </button>
         </div>
 
-        <!-- Impian, Analisis, Modal, Settings → (tidak ditampilkan seluruhnya di sini untuk ringkas)
-             Seharusnya disalin dari versi pertama sebelum duplikasi -->
+        <div id="page-impian" class="page pb-20"></div>
+        <div id="page-analisis" class="page pb-20"></div>
+
+        <div id="modal-tambah-transaksi" class="modal-overlay z-50 fixed inset-0 bg-black bg-opacity-50" onclick="hideModal('modal-tambah-transaksi')"></div>
+        <div id="modal-edit-dream" class="modal-overlay z-50 fixed inset-0 bg-black bg-opacity-50" onclick="hideModal('modal-edit-dream')"></div>
+        <div id="modal-edit-settings" class="modal-overlay z-50 fixed inset-0 bg-black bg-opacity-50" onclick="hideModal('modal-edit-settings')"></div>
+        <div id="modal-confirm-reset" class="modal-overlay z-50 fixed inset-0 bg-black bg-opacity-50" onclick="hideModal('modal-confirm-reset')"></div>
 
         <div id="toast">Pesan notifikasi...</div>
-    </div>
+
+    </div> 
 
     <script src="script.js"></script>
+
 </body>
 </html>

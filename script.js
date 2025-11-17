@@ -1,1 +1,1 @@
-/* script.js cleaned placeholder (gunakan script.js kamu sebelumnya) */
+/* script.js — tidak diubah (pakai punyamu) */
