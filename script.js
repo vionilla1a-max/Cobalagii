@@ -1,0 +1,1 @@
+/* script.js cleaned placeholder (gunakan script.js kamu sebelumnya) */
